@@ -1,4 +1,5 @@
 #include<iostream>
+#include"LoginService.h"
 
 
 void displayMenu()
@@ -14,9 +15,17 @@ void first_menu(int choice)
 {
 	switch (choice)
 	{
-	case 1:
-	
+	case 1: {
+		std::string username1, password1;
+		std::cout << "Enter username: ";
+		std::cin >> username1;
+
+		std::cout << "Enter password: ";
+		std::cin >> password1;
+		LoginPage(username1, password1);
+
 		break;
+	}
 
 	case 2:
 

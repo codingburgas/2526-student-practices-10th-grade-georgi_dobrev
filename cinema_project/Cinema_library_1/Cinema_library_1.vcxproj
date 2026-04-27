@@ -129,10 +129,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Film.cpp" />
+    <ClCompile Include="LoginService.cpp" />
     <ClCompile Include="menu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Film.h" />
+    <ClInclude Include="LoginService.h" />
     <ClInclude Include="menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

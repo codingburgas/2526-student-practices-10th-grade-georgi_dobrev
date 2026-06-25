@@ -19,10 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CinemaSystem.h" />
+    <ClInclude Include="cinema.h" />
+    <ClInclude Include="hall.h" />
+    <ClInclude Include="movie.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CinemaSystem.cpp" />
+    <ClCompile Include="cinema.cpp" />
+    <ClCompile Include="hall.cpp" />
+    <ClCompile Include="movie.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

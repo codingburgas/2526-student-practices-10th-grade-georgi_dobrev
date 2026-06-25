@@ -19,14 +19,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="booking.h" />
     <ClInclude Include="cinema.h" />
+    <ClInclude Include="cinemaSystem.h" />
     <ClInclude Include="hall.h" />
     <ClInclude Include="movie.h" />
+    <ClInclude Include="seat.h" />
+    <ClInclude Include="showtime.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="booking.cpp" />
     <ClCompile Include="cinema.cpp" />
+    <ClCompile Include="cinemaSystem.cpp" />
     <ClCompile Include="hall.cpp" />
     <ClCompile Include="movie.cpp" />
+    <ClCompile Include="seat.cpp" />
+    <ClCompile Include="showtime.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

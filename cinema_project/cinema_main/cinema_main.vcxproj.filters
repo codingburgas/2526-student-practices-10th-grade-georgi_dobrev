@@ -18,5 +18,13 @@
     <ClCompile Include="cinema_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="consoleMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="consoleMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@
 #include<string>
 #include"movie.h"
 #include"cinema.h"
+#include"showtime.h"
 
 CinemaSystem::CinemaSystem() {
     
@@ -58,13 +59,13 @@ std::vector<Movie> CinemaSystem::getMovies()
     return movies;
 }
 
-// Добавяне на филм
-void CinemaSystem::addMovie(Movie& newMovie) {
+void CinemaSystem::addMovie(Movie& newMovie) 
+{
     movies.push_back(newMovie);
 }
 
-// Изтриване на филм по заглавие
-void CinemaSystem::deleteMovie(std::string title) {
+void CinemaSystem::deleteMovie(std::string title) 
+{
     for (size_t i = 0; i < movies.size(); ++i) {
         if (movies[i].getName() == title) {
             movies.erase(movies.begin() + i);
@@ -72,4 +73,60 @@ void CinemaSystem::deleteMovie(std::string title) {
         }
     }
 }
+
+
+
+
+
+
+bool CinemaSystem::bookTicket(int showIndex, int seatNumber, std::string& customerName) {
+    
+    if (showIndex < 0 || showIndex >= showtimes.size()) {
+        std::cout << "Error: Invalid showtime selection!\n";
+        return false;
+    }
+
+   
+    Show& selectedShow = showtimes[showIndex];
+
+    
+    if (selectedShow.isSeatBooked(seatNumber)) {
+        std::cout << "\n[RESERVATION FAILED] Seat " << seatNumber << " is already taken by another customer!\n";
+        return false;
+    }
+
+    
+    double ticketPrice = 0.0;
+    std::string seatType = "";
+
+    if (seatNumber <= 10) {
+        ticketPrice = 10.00; 
+        seatType = "Silver";
+    }
+    else if (seatNumber <= 20) {
+        ticketPrice = 15.00; 
+        seatType = "Gold";
+    }
+    else {
+        ticketPrice = 20.00;
+        seatType = "Platinum";
+    }
+
+    
+    selectedShow.reserveSeat(seatNumber);
+
+    
+    std::cout << "\n========================================\n";
+    std::cout << "       BOOKING CONFIRMED SUCCESSFULLY    \n";
+    std::cout << "========================================\n";
+    std::cout << "Passenger/Customer: " << customerName << "\n";
+    std::cout << "Seat Number: " << seatNumber << " (" << seatType << " Class)\n";
+    std::cout << "Total Ticket Price: $" << ticketPrice << "\n";
+    std::cout << "----------------------------------------\n";
+    std::cout << "[NOTIFICATION Service]: Booking email confirmation dispatched to " << customerName << "@cinema.com\n";
+    std::cout << "========================================\n";
+
+    return true;
+}
+
 

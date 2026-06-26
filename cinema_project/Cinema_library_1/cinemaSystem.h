@@ -11,6 +11,9 @@ private:
     std::vector<Movie> movies;   
     std::vector<Cinema> cinemas; 
 
+
+    std::vector<Show> showtimes;
+
 public:
 
     
@@ -31,4 +34,18 @@ public:
    
     std::vector<Cinema> getCinemas();
     std::vector<Movie> getMovies();
+
+
+    void addShowtime(Show& newShow) {
+        showtimes.push_back(newShow);
+    }
+
+    
+    bool bookTicket(int showIndex, int seatNumber, std::string& customerName);
+
+    
+    std::vector<Show> getShowtimes()
+    {
+        return showtimes;
+    }
 };

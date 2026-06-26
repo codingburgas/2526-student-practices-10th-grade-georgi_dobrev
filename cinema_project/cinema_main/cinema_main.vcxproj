@@ -129,11 +129,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cinema_main.cpp" />
+    <ClCompile Include="consoleMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cinema_library_1\Cinema_library_1.vcxproj">
       <Project>{51606fbc-c0c5-48cd-a0fc-eddfb014d0a3}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="consoleMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
